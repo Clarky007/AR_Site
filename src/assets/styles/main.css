@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'SimploCaps';
-  src: url('../Assets/Fonts/SimploCaps.woff2') format('woff2'),
-    url('../Assets/Fonts/SimploCaps.woff') format('woff');
+  src: url('../fonts/SimploCaps.woff2') format('woff2'),
+    url('../fonts/SimploCaps.woff') format('woff');
   font-weight: normal;
   font-style: normal
 }
@@ -16,8 +16,33 @@ h1 {
   color: rgb(0, 0, 0);
 }
 
+.main-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  border: 1px solid #888;
+  border-left: none;
+  border-right: none;
+}
+
 p {
   color: rgb(77, 77, 77);
+}
+
+.img-container {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
 }
 
 a:link {
