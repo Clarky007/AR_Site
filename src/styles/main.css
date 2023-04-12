@@ -245,6 +245,38 @@ a:active {
   margin-bottom: 9%;
 }
 
+.portfolio-title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.7rem;
+  margin-top: 90px;
+  font-weight: 500;
+  letter-spacing: 1.6rem;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2%;
+}
+
+.img-nav {
+  position: absolute;
+  justify-content: center;
+  top: 170px;
+  right: 0;  
+  left: 0;
+  gap: 40px;
+  display: flex;
+}
+
+.img-nav img {
+  height: 300px;
+  object-fit: cover;
+  border: 4px #08549c solid;
+  padding: 4px;
+}
+.img-nav img:hover {
+  filter: opacity(50%);
+}
+
+
 /*
 footer hr{
   margin-top: auto;
