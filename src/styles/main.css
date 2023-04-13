@@ -13,6 +13,11 @@
 }
 */
 
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -259,7 +264,7 @@ a:active {
 .img-nav {
   position: absolute;
   justify-content: center;
-  top: 170px;
+  top: 200px;
   right: 0;  
   left: 0;
   gap: 40px;
@@ -271,9 +276,55 @@ a:active {
   object-fit: cover;
   border: 4px #08549c solid;
   padding: 4px;
+  border-radius: 15px;
+  position: relative;
 }
+
 .img-nav img:hover {
   filter: opacity(50%);
+}
+
+.img-nav img:active {
+  filter: opacity(10%);
+}
+
+.img-01:hover::before {
+  content: "Beautiful Luxury Home, Walking Distance to Shops, Beaches & Fine Dining!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 20;
+}
+
+.img-02:hover::before {
+  content: "House and Cottage in Beautiful Poipu Beach Estates";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 20;
+}
+
+.img-03:hover::before {
+  content: "Voted the #1 Vacation Rental on Maui!! Brand NEW! 30 Steps to Maui's Best Beach!";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 20;
 }
 
 
