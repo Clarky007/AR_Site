@@ -1,21 +1,10 @@
-@font-face {
-  font-family: 'SimploCaps';
-  src: url('../fonts/SimploCaps.woff2') format('woff2'),
-    url('../fonts/SimploCaps.woff') format('woff');
-  font-weight: lighter;
-  font-style: normal;
-  font-stretch: ultra-condensed;
-}
 
-/*  
-::-webkit-scrollbar {
-  display: none;
-}
-*/
+/* Universal */
 
 img {
   overflow-clip-margin: content-box;
   overflow: clip;
+  width: 100%;
 }
 
 html {
@@ -31,14 +20,6 @@ body {
   margin: 0;
 }
 
-h1 {
-  font-family:  Arial, Helvetica, sans-serif;
-  font-weight: 100;
-  color: rgb(255, 255, 255);
-  font-size: 3.5em;
-  text-shadow: 2px 2px 4px rgba(0,0,0,.5);
-}
-
 header {
   position: relative;
   height: auto;
@@ -46,6 +27,8 @@ header {
   margin-bottom: 60px;
   display: flex;
 }
+
+/* index */
 
 .nav-image {
   width: fit-content;
@@ -65,7 +48,7 @@ header {
   width: 150px;
 }
 
-@media only screen and (max-width: 820px ) {
+@media only screen and (max-width: 940px ) {
   .header-img {
     display: none;
   }
@@ -204,10 +187,6 @@ header {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
-img {
-  width: 100%;
-}
-
 a:link {
   color: rgb(189, 189, 189);
   background-color: transparent;
@@ -236,19 +215,7 @@ a:active {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-.text {
-  font-family: 'Times New Roman', Times, serif;
-  font-weight: 500;
-  text-align: center;
-  top: 1000px;
-  position: relative;
-  font-size: 2.3rem;
-  z-index: 1;
-  width: 65%;
-  margin: 0 auto;
-  margin-bottom: 9%;
-}
+/* Portfolio */
 
 .portfolio-title {
   text-align: center;
@@ -261,86 +228,84 @@ a:active {
   padding-bottom: 2%;
 }
 
-.img-nav {
-  position: absolute;
-  justify-content: center;
-  top: 200px;
-  right: 0;  
-  left: 0;
-  gap: 40px;
+.container {
   display: flex;
-}
-
-.img-nav img {
-  height: 300px;
-  object-fit: cover;
-  border: 4px #08549c solid;
-  padding: 4px;
-  border-radius: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 3em;
   position: relative;
+  border: red 2px solid;
 }
 
-.img-nav img:hover {
-  filter: opacity(50%);
-}
-
-.img-nav img:active {
-  filter: opacity(10%);
-}
-
-.img-01:hover::before {
-  content: "Beautiful Luxury Home, Walking Distance to Shops, Beaches & Fine Dining!";
+.container .img-desc {
   position: absolute;
   top: 0;
   left: 0;
-  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 84, 156, 0.8);
+  color: #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.container img:hover + .img-desc {
+  opacity: 1;
+}
+
+.container img {
+  width: 25rem;
+  border: 4px solid #08549c;
+  padding: 3px;
+  border-radius: 20px;
+  transition: opacity .2s, visibility .2s;
+}
+
+.caption1 , .caption2 , .caption3 {
+  position: relative;
+  display: none;
+  margin-left: 15px;
+  max-width: 384px;
+  top: -19%;
+  color: white;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  z-index: 20;
-}
-
-.img-02:hover::before {
-  content: "House and Cottage in Beautiful Poipu Beach Estates";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  padding: 10px;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  z-index: 20;
-}
-
-.img-03:hover::before {
-  content: "Voted the #1 Vacation Rental on Maui!! Brand NEW! 30 Steps to Maui's Best Beach!";
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #ffffff;
-  padding: 10px;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
-  z-index: 20;
-}
-
-
-/*
-footer hr{
-  margin-top: auto;
-  margin-bottom: 0;
-  clear: both;
-  border: 1px solid transparent;
-  height: 8px;
-}
-
-footer {
-  background-color: rgb(216, 216, 216);
-  text-align: center;
+  font-weight: 900;
   font-family: 'Times New Roman', Times, serif;
-  box-shadow: -2px -1px 2px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: larger;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
-*/
+
+:root {
+  --img-opacity: .6;
+}
+
+.item1 :hover {
+  opacity: var(--img-opacity);
+}
+.item1:hover .caption1 {
+  display: block;
+}
+
+.item2 :hover {
+  opacity: var(--img-opacity);
+}
+.item2:hover .caption2 {
+  display: block;
+}
+
+.item3 :hover {
+  opacity: var(--img-opacity);
+}
+.item3:hover .caption3 {
+  display: block;
+}
+
+
+
