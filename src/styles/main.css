@@ -28,8 +28,6 @@ header {
   display: flex;
 }
 
-/* index */
-
 .nav-image {
   width: fit-content;
   justify-content: center;
@@ -65,6 +63,36 @@ header {
   padding-top: 20px;
   z-index: 900;
 }
+
+a:link {
+  color: rgb(189, 189, 189);
+  background-color: transparent;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+  color: rgb(255, 204, 93);
+  background-color: transparent;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a:active {
+  color: rgb(255, 0, 0);
+  background-color: transparent;
+  text-decoration: underline;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* index */
 
 .video-text {
   position: absolute;
@@ -187,34 +215,6 @@ header {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
-a:link {
-  color: rgb(189, 189, 189);
-  background-color: transparent;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-a:visited {
-  color: rgb(255, 255, 255);
-  background-color: transparent;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-a:hover {
-  color: rgb(255, 204, 93);
-  background-color: transparent;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-a:active {
-  color: rgb(255, 0, 0);
-  background-color: transparent;
-  text-decoration: underline;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 /* Portfolio */
 
 .portfolio-title {
@@ -268,18 +268,20 @@ a:active {
 
 .caption1 , .caption2 , .caption3 {
   position: relative;
-  display: none;
   margin-left: 15px;
   max-width: 384px;
-  top: -19%;
+  top: -19%; /*38*/
   color: white;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   font-weight: 900;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
-  font-size: larger;
-  background-color: rgba(0, 0, 0, 0.5);
+  font-size: large;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s linear;
 }
 
 :root {
@@ -290,22 +292,60 @@ a:active {
   opacity: var(--img-opacity);
 }
 .item1:hover .caption1 {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .item2 :hover {
   opacity: var(--img-opacity);
 }
 .item2:hover .caption2 {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .item3 :hover {
   opacity: var(--img-opacity);
 }
 .item3:hover .caption3 {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
+/* Contact-us */
 
+.contact-us-title {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.7rem;
+  margin-top: 90px;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 2%;
+}
 
+.contact-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 3em;
+  position: relative;
+  /* border: red 2px solid; */
+}
+
+.ABC-contact {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  line-height: 0.3;
+  font-size: 125%;
+  /* border: #08549c 4px solid; */
+  background-color: #08549c;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
