@@ -235,7 +235,10 @@ a:active {
   align-content: center;
   gap: 3em;
   position: relative;
-  border: red 2px solid;
+}
+
+.item {
+  position: relative;
 }
 
 .container .img-desc {
@@ -266,11 +269,11 @@ a:active {
   transition: opacity .2s, visibility .2s;
 }
 
-.caption1 , .caption2 , .caption3 {
-  position: relative;
+.caption {
+  position: absolute;
   margin-left: 15px;
   max-width: 384px;
-  top: -19%; /*38*/
+  bottom: 20px;
   color: white;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   font-weight: 900;
@@ -282,32 +285,17 @@ a:active {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.3s linear;
+  cursor: pointer;
 }
 
 :root {
   --img-opacity: .6;
 }
 
-.item1 :hover {
+.item:hover {
   opacity: var(--img-opacity);
 }
-.item1:hover .caption1 {
-  visibility: visible;
-  opacity: 1;
-}
-
-.item2 :hover {
-  opacity: var(--img-opacity);
-}
-.item2:hover .caption2 {
-  visibility: visible;
-  opacity: 1;
-}
-
-.item3 :hover {
-  opacity: var(--img-opacity);
-}
-.item3:hover .caption3 {
+.item:hover .caption {
   visibility: visible;
   opacity: 1;
 }
