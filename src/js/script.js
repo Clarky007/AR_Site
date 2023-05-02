@@ -43,3 +43,4 @@ document.addEventListener('keydown', function(event) {
     konamiCodeIndex = 0;
   }
 });
+
