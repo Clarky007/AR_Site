@@ -352,28 +352,32 @@ footer {
 
 /* Contact-us */
 
-.contact-container {
-  margin-top: 100px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: center;
-  gap: 3em;
+.temp-fill {
+  border: 2px red solid;
+  background-color: rgba(255, 0, 0, 0.2);
+  padding-bottom: 21.5%;
+  width: 100%;
   position: relative;
 }
 
-.contact-card {
-  font-family: Arial, Helvetica, sans-serif;
+.contact-container {
+  /* border: red 2px solid; */
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  flex-wrap: nowrap;
   text-align: center;
-  font-size: 135%;
-  background-color: #08549c;
-  color: white;
-  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  width: 350px;
+  border: 2px red solid;
 }
 
-.contact-card img {
-  width: 250px;
+.us {
+  width: 33%;
+  height: 500px;
+  border: 2px solid blue;
+}
+
+iframe {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: #08549c 4px solid !important;
 }
