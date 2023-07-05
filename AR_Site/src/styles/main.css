@@ -16,8 +16,9 @@ html, body {
 }
 
 body {
-  background-color: rgb(255, 250, 239);
+  background-color: #262626;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .header-background {
@@ -26,7 +27,7 @@ body {
   right: 50%;
   transform: translateX(50%);
   padding-bottom: 60px;
-  background-color: #08549c;
+  background-color: #0a1535;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   box-shadow: 0px -1px 5px rgba(0,0,0,.5);
@@ -69,14 +70,14 @@ header {
 }
 
 a:link {
-  color: rgb(189, 189, 189);
+  color: #cdcdcd;
   background-color: transparent;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 a:visited {
-  color: rgb(255, 255, 255);
+  color: #cdcdcd;
   background-color: transparent;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
@@ -97,9 +98,107 @@ a:active {
 }
 
 footer {
-  border: 2px solid red;
-  background-color: rgba(255, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  z-index: -999;
+  background-color: #0a1535;
+}
+footer:hover {
+  cursor: default;
+}
+
+footer p {
+  margin: 0px;
+}
+
+.foot-horiz {
   position: relative;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  /* align-items: center; */
+  height: 350px;
+  border-bottom: solid 2px #454545;
+}
+
+.bottom-horiz {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vert {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding: 20px;
+  color: rgb(137, 137, 137);
+  display: flex;
+  gap: 30px ;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.aso {
+  border: 3px solid seagreen;
+  color: seagreen;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  border-radius: 20px;
+  font-size: small;
+  padding: 5px;
+  font-weight: 600;
+  width: 189px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.sso {
+  border: 3px solid #ffba39;
+  color: #ffba39;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  border-radius: 20px;
+  font-size: small;
+  padding: 5px;
+  font-weight: 600;
+  width: 202px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.asd {
+  border: 3px solid #ae0000;
+  color: #ae0000;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  border-radius: 20px;
+  font-size: small;
+  padding: 5px;
+  font-weight: 600;
+  width: 136px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+
+
+.fill {
+  /* border: 2px red solid; */
+  align-items: center;
+  margin-top: 100px;
+  width: 300px;
+  height: 1px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fill h1 {
+  font-size: 19px;
+  color: #555555;
+  font-weight: 500;
+}
+
+.fill p {
+  color: rgb(194, 194, 194);
+  line-height: 25px;
 }
 
 /* index */
@@ -240,15 +339,27 @@ footer {
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
 }
 
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #0a1535;
+  align-self: center;
+}
+
 .partners {
-  background-color: rgb(62, 62, 62);
-  /* background-color: #08549c; */
+  /* background-color: rgb(62, 62, 62); */
+  background-color: #262626;
+
   padding-bottom: 60px;
   /* padding-top: 20px; */
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  border-top: #08549c 4px solid;
+  border-top: #0a1535 8px solid;
+  /* box-shadow: 0px 1px 10px 1px rgba(0, 0, 0, 0.5); */
+  z-index: 10;
 }
 .partTitle {
   color: white;
@@ -258,8 +369,8 @@ footer {
   letter-spacing: 25px;
   font-size: 50px;
   padding-bottom: 10px;
-  /* text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); */
-  text-shadow: #08549c 5px 5px 3px;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+
 }
 .partners:hover {
   cursor: default;
@@ -345,7 +456,7 @@ footer {
   color: #cdcdcd;
 }
 .kauai-plumb-back a:hover{
-  color: #08549c;
+  color: #0a1535;
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -414,7 +525,7 @@ footer {
   color: #cdcdcd;
 }
 .harper-conc-back a:hover{
-  color: #08549c;
+  color: #0a1535;
 }
 
 .testimonials {
@@ -430,8 +541,9 @@ footer {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 2.7rem;
+  color: #cdcdcd;
   margin-top: 90px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 1.6rem;
   text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
   padding-bottom: 2%;
@@ -444,6 +556,7 @@ footer {
   align-content: center;
   gap: 3em;
   position: relative;
+  margin-bottom: 50px;
 }
 
 .item {
@@ -456,7 +569,7 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(8, 84, 156, 0.8);
+  background: #0a1535;
   color: #fff;
   font-size: 1.2rem;
   display: flex;
@@ -472,7 +585,7 @@ footer {
 
 .container img {
   width: 25rem;
-  border: 4px solid #08549c;
+  border: 4px solid #0a1535;
   padding: 3px;
   border-radius: 20px;
   transition: opacity .2s, visibility .2s;
@@ -512,7 +625,7 @@ footer {
 /* Our-company */
 
 .our-company-display {
-  background-color: #08549c;
+  background-color: #0a1535;
   width: 100%;
   object-fit: cover;
 }
@@ -523,7 +636,6 @@ footer {
   position: relative;
   object-fit: cover;
   z-index: 0;
-  /* border-bottom:#08549c 4px solid ; */
   /* padding-bottom: 4px; */
 }
 
@@ -551,7 +663,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(196, 196, 196);
+  /* background-color: rgb(196, 196, 196); */
   height: 100%;
   padding-bottom: 50px;
 }
@@ -566,14 +678,14 @@ footer {
   justify-content: center;
   text-align: center;
   align-items: center;
-  color: #000000;
+  color: #cdcdcd;
   font-weight: 600;
 }
 
 .our-top p {
   width: 70vw;
   font-size: 2.5vw;
-  background-color: rgb(168, 168, 168);
+  background-color: #0a1535;
   border-radius: 50px;
   padding: 20px;
   padding-right: 100px;
@@ -588,7 +700,7 @@ footer {
   gap: 10vw ;
   text-align: center;
   align-items: center;
-  color: white;
+  color: black;
   font-weight: 600;
   /* text-shadow: 1px 1px 4px rgba(0,0,0,.5); */
 }
@@ -597,7 +709,7 @@ footer {
   font-family: Georgia, serif;
   font-size: 1.75vw;
   font-style: italic;
-  width: 40vw;
+  width: 600px;
   margin: 0.25em 0;
   padding: 0.35em 40px;
   /* line-height: 1.45; */
@@ -607,21 +719,21 @@ footer {
 
 .our-bottom p:before {
   display: block;
-  padding-left: 1vw;
+  /* padding-left: 1vw; */
   content: "\201C";
-  font-size: 120px;
+  font-size: 10vw;
   position: absolute;
   font-family:  'Times New Roman', Times, serif;
   left: -40px;
   top: -50px;
-  color: white;
+  color: black;
 }
 
 .our-bottom img {
   width: 12vw;
   height: 12vw;
   border-radius: 100%;
-  border: #08549c .3vw solid;
+  border: #0a1535 .3vw solid;
   padding: 1px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 }
@@ -632,7 +744,7 @@ footer {
     gap: 0;
   }
   .our-bottom p {
-    width: 75vw;
+    width: 400px;
     font-size: 3.5vw;
   }
   .our-bottom p:before {
@@ -658,7 +770,7 @@ footer {
   position: absolute;
   text-align: left;
   line-height: 10px;
-  border-left: #08549c 8px solid;
+  border-left: #0a1535 8px solid;
   margin-left: 20px;
   padding-left: 10px;
   top: 50%;
@@ -679,8 +791,8 @@ footer {
   position: relative;
   /* opacity: 75%; */
   z-index: 0;
-  border-bottom: #08549c 4px solid;
-  border-top: #08549c 4px solid;
+  border-bottom: #0a1535 8px solid;
+  border-top: #0a1535 4px solid;
 }
 
 .us {
@@ -697,7 +809,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(119, 119, 119, 0.13);
+  background-color: #262626;
   justify-content: space-between;
   /* border: red 2px solid; */
 }
@@ -730,10 +842,11 @@ footer {
 
 .form-text {
   text-align: left;
-  border: #08549c 1px solid;
+  border: #0a1535 1px solid;
   padding: 20px;
-  background-color: rgba(119, 119, 119, 0.13);
+  background-color: rgba(190, 190, 190, 0.13);
   border-radius: 5px;
+  color: white;
   width: 75%;
   margin-top: 10px;
   box-shadow: 4px 4px 0px rgba(0,0,0,.2);
@@ -750,15 +863,16 @@ footer {
   width: 79%;
   font-size: larger;
   margin-top: 20px;
+  color: #cdcdcd;
 }
 
 .send-button {
   border: 0;
   font-size: larger;
   padding: 20px;
-  background-color: #08549c;
+  background-color: #0a1535;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: #cdcdcd;
   border-radius: 2px;
   margin-top: 15px;
   margin-bottom: 30px;
@@ -768,7 +882,6 @@ footer {
 }
 
 .send-button:hover {
-  /* background-color: #08549c93 !important; */
   box-shadow: 6px 6px 0px rgba(0,0,0,.6);
 }
 
